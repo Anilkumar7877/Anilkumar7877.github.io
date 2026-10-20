@@ -103,7 +103,7 @@ export const portfolioContent: PortfolioData = {
     githubUsername: "Anilkumar7877",
     githubUrl: "https://github.com/Anilkumar7877",
     linkedinUrl: "https://www.linkedin.com/in/anilkumar7877", // PLACEHOLDER: Replace with your verified LinkedIn profile
-    resumePath: "/resume.pdf", // PLACEHOLDER: Add your resume PDF into public/resume.pdf
+    resumePath: "/Anil_Kumar_Resume.pdf",
     statusTag: "Seeking 2025/2026 Internships & New Grad Roles (2027)",
   },
 
@@ -143,8 +143,7 @@ export const portfolioContent: PortfolioData = {
         "Full-duplex voice interface engineered with Groq Whisper for speech transcription, Cartesia Sonic for ultra-low latency TTS, LangGraph for cyclical stateful agent orchestration, and Silero VAD for instant barge-in detection. Features SQLite-backed LLM-as-a-judge evaluation harness to benchmark conversational latency, intent accuracy, and context retention.",
       techTags: ["Groq Whisper", "Cartesia TTS", "LangGraph", "Silero VAD", "Python", "SQLite", "WebSockets"],
       links: [
-        { label: "Code", url: "https://github.com/Anilkumar7877/voice-ai-agent", type: "github" }, // PLACEHOLDER: Replace if repository URL differs
-        { label: "Live Demo", url: "https://github.com/Anilkumar7877", type: "live" }, // PLACEHOLDER: Replace with live demo URL
+        { label: "Code", url: "https://github.com/Anilkumar7877/Voice-Agent", type: "github" },
       ],
       metrics: "< 450ms voice-to-voice turn latency, 99.2% barge-in precision",
       architectureNote: "WebSocket state machine with parallel audio chunks and LangGraph memory persistence",
@@ -158,41 +157,41 @@ export const portfolioContent: PortfolioData = {
     {
       id: "rag-document-qa",
       title: "RAG Document Q&A Engine",
-      tagline: "Production-grade retrieval pipeline with hybrid BM25 + dense search and cross-encoder re-ranking.",
+      tagline: "Production-grade retrieval pipeline with semantic embeddings and enterprise ingest workflows.",
       description:
-        "High-accuracy enterprise document intelligence API constructed with FastAPI, LangChain, and ChromaDB. Implements reciprocal rank fusion (RRF) between lexical BM25 and semantic vector embeddings, followed by a cross-encoder re-ranking stage. Validated with automated RAGAS framework evaluating context recall, precision, and faithfulness score of ~0.815.",
-      techTags: ["FastAPI", "LangChain", "ChromaDB", "BM25", "Cross-Encoder", "RAGAS", "Python"],
+        "High-accuracy enterprise document intelligence API constructed with FastAPI, LangChain, ChromaDB, and Gemini API. Implements complex internal algorithms for semantic embeddings, building secure ingest pipelines capable of parsing large-scale enterprise data with low-latency page-attributed vector lookups.",
+      techTags: ["Python", "FastAPI", "LangChain", "ChromaDB", "Gemini API", "Vector Search"],
       links: [
-        { label: "Code", url: "https://github.com/Anilkumar7877/rag-document-qa", type: "github" }, // PLACEHOLDER: Replace if repository URL differs
-        { label: "API Docs", url: "https://github.com/Anilkumar7877", type: "live" }, // PLACEHOLDER: Replace with live docs
+        { label: "Code", url: "https://github.com/Anilkumar7877/RAG-QA-System", type: "github" },
+        { label: "Live Demo", url: "https://rag-qa-system-lemon.vercel.app/", type: "live" },
       ],
-      metrics: "0.815 RAGAS faithfulness score, 2.4x reduction in hallucination rates",
-      architectureNote: "Hybrid lexical/dense retrieval pipeline with dynamic token windowing and score thresholding",
+      metrics: "Low-latency page-attributed vector lookups, large-scale enterprise data ingest",
+      architectureNote: "Semantic chunking pipeline with dynamic token windowing, vector indexing, and memory retention",
       audienceHighlights: {
         anyone: "Ask questions against complex PDF and technical manuals with verifiable citations.",
         recruiters: "Demonstrates rigorous evaluation methodology using RAGAS and scalable API architecture.",
-        engineers: "Hybrid search fusion (RRF) + cross-encoder re-ranker eliminating false positives before context injection.",
+        engineers: "Robust semantic search pipeline with ChromaDB vector embeddings and clean FastAPI endpoints.",
         pm: "Transforms unorganized organizational documents into trusted, hallucination-resistant knowledge for teams.",
       },
     },
     {
       id: "resume-coach",
       title: "Resume Coach AI Platform",
-      tagline: "Intelligent ATS parser and tailored interview preparation companion.",
+      tagline: "Full-stack app that analyzes resumes and helps with interview prep using AI.",
       description:
-        "Full-stack SaaS application built with Next.js App Router, Prisma ORM, Supabase PostgreSQL, Clerk authentication, and UploadThing for secure multi-format document intake. Integrates Groq Llama 3 models for near-instant structured feedback on resume readability, ATS keyword coverage, and role-specific gap analysis.",
-      techTags: ["Next.js", "Prisma", "Supabase", "Clerk", "UploadThing", "Groq", "TypeScript", "Tailwind CSS"],
+        "Next.js app where users upload a resume (UploadThing), sign in with Clerk, and get AI feedback from Groq-hosted Llama models. Data is stored in Supabase Postgres through Prisma.",
+      techTags: ["Next.js", "TypeScript", "Prisma", "Supabase", "Clerk", "UploadThing", "Groq", "Tailwind CSS"],
       links: [
-        { label: "Code", url: "https://github.com/Anilkumar7877/resume-coach", type: "github" }, // PLACEHOLDER: Replace if repository URL differs
-        { label: "Live App", url: "https://github.com/Anilkumar7877", type: "live" }, // PLACEHOLDER: Replace with live demo
+        { label: "Code", url: "https://github.com/Anilkumar7877/resume-coach", type: "github" },
+        { label: "Live App", url: "https://resume-coach-tan.vercel.app/", type: "live" },
       ],
-      metrics: "Under 1.8s full analysis turnaround, typed schema validation via Zod",
-      architectureNote: "Server actions with edge document streaming, webhook verification, and transactional DB updates",
+      metrics: "End-to-end resume analysis with structured AI feedback.",
+      architectureNote: "Next.js App Router -> Clerk auth -> UploadThing file intake -> Groq Llama analysis -> Prisma + Supabase Postgres.",
       audienceHighlights: {
-        anyone: "Upload your resume and receive immediate actionable recommendations to beat applicant screening bots.",
-        recruiters: "Full-stack ownership spanning auth, storage, database schemas, and external AI inference endpoints.",
-        engineers: "Type-safe Next.js architecture with Prisma migrations, Clerk webhooks, and resilient upload pipelines.",
-        pm: "Clear user value proposition with immediate visual feedback loop, driving high session completion rates.",
+        anyone: "Upload your resume and receive AI-driven actionable recommendations and interview preparation.",
+        recruiters: "Demonstrates end-to-end full stack development with modern authentication, file storage, and AI inference.",
+        engineers: "Structured schema design with Prisma ORM, Supabase PostgreSQL, and clean component architecture.",
+        pm: "Direct user value proposition with seamless file upload and structured AI insights.",
       },
     },
     {
@@ -203,8 +202,7 @@ export const portfolioContent: PortfolioData = {
         "Distributed scraping and synchronization platform unifying fragmented engineering activity across GitHub, LeetCode, Codeforces, and GeeksforGeeks into a cohesive SVG contribution matrix. Powered by an asynchronous FastAPI backend, Redis write-through caching layer, and Postgres storage, surfaced through an interactive Next.js dashboard.",
       techTags: ["FastAPI", "Next.js", "Redis", "PostgreSQL", "AsyncIO", "Docker", "Tailwind CSS"],
       links: [
-        { label: "Code", url: "https://github.com/Anilkumar7877/merged-contribution-graph", type: "github" }, // PLACEHOLDER: Replace if repository URL differs
-        { label: "Live Service", url: "https://github.com/Anilkumar7877", type: "live" }, // PLACEHOLDER: Replace with demo
+        { label: "Code", url: "https://github.com/Anilkumar7877/merged-progress-contribution", type: "github" },
       ],
       metrics: "15-minute background sync cron, sub-20ms cached response time",
       architectureNote: "Distributed rate-limited scrapers with Redis fallback, exponential backoff, and idempotent DB upserts",
@@ -216,22 +214,22 @@ export const portfolioContent: PortfolioData = {
       },
     },
     {
-      id: "devops-infrastructure",
-      title: "Cloud Infrastructure & CI/CD Pipelines",
-      tagline: "Automated containerized delivery on AWS EC2 & 3-Tier EKS cluster provisioning with Terraform.",
+      id: "focusflow-flask-mysql-cicd",
+      title: "FocusFlow: Two-Tier Flask/MySQL CI/CD on AWS EC2",
+      tagline: "Containerized task-management app deployed to AWS EC2 by an automated Jenkins pipeline.",
       description:
-        "Production-grade infrastructure automation suite: 1) Automated CI/CD pipeline deploying a containerized Flask/MySQL application on AWS EC2 using Docker, Jenkins webhooks, and health-check rollback gates; 2) Multi-tier, high-availability AWS EKS cluster orchestrated declaratively with Terraform, establishing isolated VPCs, subnets, IAM RBAC roles, and ALB ingress controllers.",
-      techTags: ["AWS EKS", "Terraform", "Docker", "Jenkins", "AWS EC2", "Kubernetes", "MySQL", "Bash"],
+        "A Flask REST API with a MySQL database and a glassmorphic vanilla-JS frontend, run with Docker Compose on an Ubuntu EC2 instance. A declarative Jenkinsfile checks out the code, builds the images, deploys the containers, and runs health checks on every push.",
+      techTags: ["Jenkins", "Docker", "Docker Compose", "AWS EC2", "Flask", "MySQL", "GitHub Webhooks", "Python"],
       links: [
-        { label: "Repo", url: "https://github.com/Anilkumar7877/devops-eks-terraform", type: "github" }, // PLACEHOLDER: Replace if repository URL differs
+        { label: "Repo", url: "https://github.com/Anilkumar7877/Two-Tier-Flask-App-Docker-Jenkins", type: "github" },
       ],
-      metrics: "Zero-downtime rolling deployments, 100% reproducible Infrastructure as Code",
-      architectureNote: "Terraform remote state locking via S3 + DynamoDB, multi-AZ VPC layout, Jenkins automated staging tests",
+      metrics: "Push-to-deploy via GitHub webhook trigger, with health checks after every deployment.",
+      architectureNote: "GitHub webhook -> Jenkins (EC2, port 8080) -> Docker Compose build -> Flask app (5000) + MySQL (3307 on the host), with a security group limited to SSH, 8080, and 5000.",
       audienceHighlights: {
-        anyone: "Reliable cloud foundations ensuring software runs 24/7 without human intervention.",
-        recruiters: "Proves hands-on Cloud & DevOps engineering skills beyond pure application layer programming.",
-        engineers: "Modular Terraform HCL, Kubernetes ingress configurations, and Jenkins pipeline scripts with failure alerts.",
-        pm: "Reduces release cycle risks with automated testing gates and zero-downtime deployments.",
+        anyone: "Containerized task-management app deployed to AWS EC2 by an automated Jenkins pipeline.",
+        recruiters: "Demonstrates practical DevOps, CI/CD pipeline automation, and container orchestration on cloud infrastructure.",
+        engineers: "Declarative Jenkinsfile pipeline running Docker Compose with isolated network ports and automated health checks.",
+        pm: "Automates the delivery lifecycle with GitHub webhooks, eliminating manual deployments and deployment errors.",
       },
     },
   ],

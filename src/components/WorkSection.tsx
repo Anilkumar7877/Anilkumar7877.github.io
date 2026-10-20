@@ -36,9 +36,11 @@ export function WorkSection() {
                   </p>
                 </div>
 
-                {/* Project Links with Minimal Icons */}
+                {/* Project Links with Minimal Icons (only renders if valid real deployed/repo URL exists) */}
                 <div className="flex items-center gap-3 font-mono text-xs">
-                  {project.links.map((link) => (
+                  {project.links
+                    .filter((link) => Boolean(link.url) && link.url !== "https://github.com/Anilkumar7877")
+                    .map((link) => (
                     <a
                       key={link.label}
                       href={link.url}
